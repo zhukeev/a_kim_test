@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:a_kim_test/util/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -36,7 +38,11 @@ class FlightItem extends StatelessWidget {
                 SizedBox(height: 8),
                 Row(
                   children: [
-                    Image.asset(Assets.image1),
+                    Image.asset([
+                      Assets.image1,
+                      Assets.image2,
+                      Assets.image3
+                    ][Random().nextInt(3)]),
                     SizedBox(width: 8),
                     Text(
                       'Nonstop • 8h'.toUpperCase(),
